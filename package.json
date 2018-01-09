@@ -1,0 +1,30 @@
+{
+  "name": "env-proxy-agent",
+  "version": "0.1.0",
+  "description": "Maps environment variables to http.Agent implementations",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "prebuild": "npm run clean",
+    "build": "babel src --out-dir lib --copy-files",
+    "prepublish": "npm run build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/crosscompile/env-proxy-agent.git"
+  },
+  "author": "Jack Cross <jackjocross@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "proxy-agent": "^2.1.0",
+    "proxy-from-env": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.0.4",
+    "rimraf": "^2.6.2"
+  }
+}
